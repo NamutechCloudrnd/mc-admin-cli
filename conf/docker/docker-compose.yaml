@@ -716,9 +716,6 @@ services:
       COSTOPTI_COSTPROCESSOR_URL: ${MC_COST_OPTIMIZER_COST_PROCESSOR_URL}
       COSTOPTI_COSTSELECTOR_URL: ${MC_COST_OPTIMIZER_COST_SELECTOR_URL}
 
-      ##timezone setting
-      TZ: Asia/Seoul
-
   mc-cost-optimizer-azure-vm-rightsizer:
     restart: on-failure
     container_name: mc-cost-optimizer-azure-vm-rightsizer
