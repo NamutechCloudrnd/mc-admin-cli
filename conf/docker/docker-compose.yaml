@@ -429,6 +429,7 @@ services:
     volumes:
       - ./tool/mcc:/app/tool/mcc
     environment:
+      TZ: Asia/Seoul
       spring.datasource.hikari.cost.optimize.jdbc-url: ${MC_COST_OPTIMIZER_COST_DB_URL_NEW}
       spring.datasource.hikari.cost.optimize.username: ${MC_COST_OPTIMIZER_MYSQL_USER}
       spring.datasource.hikari.cost.optimize.password: ${MC_COST_OPTIMIZER_MYSQL_PASSWORD}
@@ -469,6 +470,7 @@ services:
     volumes:
       - ./tool/mcc:/app/tool/mcc
     environment:
+      TZ: Asia/Seoul
       spring.datasource.hikari.batch.jdbc-url: ${MC_COST_OPTIMIZER_COST_DB_URL}
       spring.datasource.hikari.batch.username: ${MC_COST_OPTIMIZER_MYSQL_USER}
       spring.datasource.hikari.batch.password: ${MC_COST_OPTIMIZER_MYSQL_PASSWORD}
@@ -503,6 +505,7 @@ services:
     volumes:
       - ./tool/mcc:/app/tool/mcc
     environment:
+      TZ: Asia/Seoul
       spring.datasource.hikari.batch.jdbc-url: ${MC_COST_OPTIMIZER_COST_DB_URL}
       spring.datasource.hikari.batch.username: ${MC_COST_OPTIMIZER_MYSQL_USER}
       spring.datasource.hikari.batch.password: ${MC_COST_OPTIMIZER_MYSQL_PASSWORD}
@@ -609,6 +612,7 @@ services:
     volumes:
       - ./tool/mcc:/app/tool/mcc
     environment:
+      TZ: Asia/Seoul
       SPRING_DATASOURCE_URL: ${MC_COST_OPTIMIZER_COST_DB_URL}
       SPRING_DATASOURCE_USERNAME: ${MC_COST_OPTIMIZER_MYSQL_USER}
       SPRING_DATASOURCE_PASSWORD: ${MC_COST_OPTIMIZER_MYSQL_PASSWORD}
@@ -650,7 +654,7 @@ services:
     volumes:
       - ./tool/mcc:/app/tool/mcc
     environment:
-
+      TZ: Asia/Seoul
       spring.datasource.url: ${MC_COST_OPTIMIZER_COST_DB_URL}
       spring.datasource.username: ${MC_COST_OPTIMIZER_MYSQL_USER}
       spring.datasource.password: ${MC_COST_OPTIMIZER_MYSQL_PASSWORD}
@@ -691,6 +695,7 @@ services:
     volumes:
       - ./tool/mcc:/app/tool/mcc
     environment:
+      TZ: Asia/Seoul
       SPRING_DATASOURCE_URL: ${MC_COST_OPTIMIZER_COST_DB_URL}
       SPRING_DATASOURCE_USERNAME: ${MC_COST_OPTIMIZER_MYSQL_USER}
       SPRING_DATASOURCE_PASSWORD: ${MC_COST_OPTIMIZER_MYSQL_PASSWORD}
@@ -733,6 +738,7 @@ services:
     volumes:
       - ./tool/mcc:/app/tool/mcc
     environment:
+      TZ: Asia/Seoul
       SPRING_DATASOURCE_URL: ${MC_COST_OPTIMIZER_COST_DB_URL}
       SPRING_DATASOURCE_USERNAME: ${MC_COST_OPTIMIZER_MYSQL_USER}
       SPRING_DATASOURCE_PASSWORD: ${MC_COST_OPTIMIZER_MYSQL_PASSWORD}
@@ -774,6 +780,7 @@ services:
     volumes:
       - ./tool/mcc:/app/tool/mcc
     environment:
+      TZ: Asia/Seoul
       SPRING_DATASOURCE_URL: ${MC_COST_OPTIMIZER_COST_DB_URL}
       SPRING_DATASOURCE_USERNAME: ${MC_COST_OPTIMIZER_MYSQL_USER}
       SPRING_DATASOURCE_PASSWORD: ${MC_COST_OPTIMIZER_MYSQL_PASSWORD}
