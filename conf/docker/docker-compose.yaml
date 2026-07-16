@@ -445,7 +445,6 @@ services:
       OPENBAO_ENABLED: ${MC_COST_OPTIMIZER_OPENBAO_ENABLED}
       OPENBAO_ADDRESS: ${MC_COST_OPTIMIZER_OPENBAO_ADDRESS}
       OPENBAO_TOKEN: ${MC_COST_OPTIMIZER_OPENBAO_TOKEN}
-      archive.s3.region: ${MC_COST_OPTIMIZER_ARCHIVE_S3_REGION:-ap-northeast-2}
       
     healthcheck:
       test: [ "CMD", "/app/tool/mcc", "rest", "get",  "http://localhost:9090/api/costopti/be/readyz" ]
