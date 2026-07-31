@@ -847,7 +847,7 @@ services:
     restart: "no"
 
   mc-cost-optimizer-db:
-    image: mariadb:latest
+    image: mariadb:12.3.2
     container_name: mc-cost-optimizer-db
     depends_on:
       mc-cost-optimizer-init-volume:
