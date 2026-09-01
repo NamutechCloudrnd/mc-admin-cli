@@ -998,7 +998,7 @@ services:
 ##### MC-WORKFLOW-MANAGER #########################################################################################################################
 
   mc-workflow-manager-jenkins:
-    image: jenkins/jenkins:2.504.1-lts-jdk17
+    image: jenkins/jenkins:2.504.3-lts-jdk17
     container_name: mc-workflow-manager-jenkins
     platform: linux/amd64
     networks:
@@ -1017,12 +1017,19 @@ services:
     environment:
       JENKINS_USERNAME: ${MC_WORKFLOW_MANAGER_JENKINS_USERNAME:-admin}
       JENKINS_PASSWORD: ${MC_WORKFLOW_MANAGER_JENKINS_PASSWORD:-123456}
-      JAVA_OPTS: -Djenkins.install.runSetupWizard=false
+      PRE_CLEAR_INIT_GROOVY_D: true
+      JAVA_OPTS: -Djenkins.install.runSetupWizard=false -Dhudson.lifecycle=hudson.lifecycle.UnixLifecycle
     user: root
     restart: always
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/login"]
+      test:
+        - CMD-SHELL
+        - >-
+          test -f /var/jenkins_home/.mcmp-init-complete &&
+          curl -fsS -u "$${JENKINS_USERNAME}:$${JENKINS_PASSWORD}"
+          http://localhost:8080/api/json > /dev/null
       <<: *default-health-check
+      start_period: 6m
 
 
   mc-workflow-manager:
