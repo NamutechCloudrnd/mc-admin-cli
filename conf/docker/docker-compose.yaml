@@ -1229,7 +1229,7 @@ services:
       <<: *default-health-check
 ##### MC-OBSERVABILITY #########################################################################################################################
   mc-observability-manager:
-    image: cloudbaristaorg/mc-observability:0.6.0
+    image: cloudbaristaorg/mc-observability:0.6.1
     container_name: mc-observability-manager
     restart: unless-stopped
     networks:
@@ -1269,7 +1269,7 @@ services:
       start_period: 5m
 
   mc-observability-front:
-    image: cloudbaristaorg/mc-observability-front:0.6.0
+    image: cloudbaristaorg/mc-observability-front:0.6.1
     container_name: mc-observability-front
     restart: unless-stopped
     networks:
@@ -1281,7 +1281,7 @@ services:
         condition: service_started
 
   mc-observability-infra:
-    image: cloudbaristaorg/mc-observability-infra:0.6.0
+    image: cloudbaristaorg/mc-observability-infra:0.6.1
     container_name: mc-observability-infra
     restart: unless-stopped
     networks:
@@ -1406,7 +1406,7 @@ services:
     init: true
 
   mc-observability-influx:
-    image: cloudbaristaorg/mc-observability-influx:0.6.0
+    image: cloudbaristaorg/mc-observability-influx:0.6.1
     container_name: mc-observability-influx
     restart: unless-stopped
     networks:
@@ -1448,7 +1448,7 @@ services:
       - mc-observability-network
 
   mc-observability-influx-2:
-    image: cloudbaristaorg/mc-observability-influx:0.6.0
+    image: cloudbaristaorg/mc-observability-influx:0.6.1
     container_name: mc-observability-influx-2
     restart: unless-stopped
     networks:
@@ -1624,7 +1624,7 @@ services:
     init: true
 
   mc-observability-grafana:
-    image: cloudbaristaorg/mc-observability-grafana:0.6.0
+    image: cloudbaristaorg/mc-observability-grafana:0.6.1
     container_name: mc-observability-grafana
     restart: unless-stopped
     networks:
@@ -1659,7 +1659,7 @@ services:
         fi
 
   mc-observability-insight:
-    image: cloudbaristaorg/mc-observability-insight:0.6.0
+    image: cloudbaristaorg/mc-observability-insight:0.6.1
     container_name: mc-observability-insight
     restart: always
     networks:
@@ -1686,7 +1686,7 @@ services:
       start_period: 10s
 
   mc-observability-insight-scheduler:
-    image: cloudbaristaorg/mc-observability-insight-scheduler:0.6.0
+    image: cloudbaristaorg/mc-observability-insight-scheduler:0.6.1
     container_name: mc-observability-insight-scheduler
     restart: always
     ports:
@@ -1765,7 +1765,7 @@ services:
       - mc-observability-network
 
   mc-observability-mcp-maria:
-    image: cloudbaristaorg/mc-observability-mcp-mariadb:0.6.0
+    image: cloudbaristaorg/mc-observability-mcp-mariadb:0.6.1
     container_name: mc-observability-mcp-maria
     restart: always
     networks:
@@ -1789,7 +1789,7 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
 
   mc-observability-mcp-influx:
-    image: cloudbaristaorg/mc-observability-mcp-influxdb:0.6.0
+    image: cloudbaristaorg/mc-observability-mcp-influxdb:0.6.1
     container_name: mc-observability-mcp-influx
     restart: always
     ports:
